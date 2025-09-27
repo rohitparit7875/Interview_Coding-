@@ -1,0 +1,10 @@
+#!/bin/bash
+# Simple backup script
+
+SRC="/var/www/html"
+DEST="/backup/html_$(date +%F).tar.gz"
+
+echo "Starting backup..."
+tar -czf $DEST $SRC
+
+echo "Backup completed: $DEST"
